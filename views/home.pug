@@ -1,0 +1,32 @@
+html
+  head
+    title=title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN', crossorigin='anonymous')
+    style(type='text/css').
+      body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      .table td.fit,
+      .table th.fit {
+          white-space: nowrap;
+          width: 1%;
+      }
+  body
+    div.container
+      h1 Who's Hiring
+      p.lead
+        | An overview of the most recent #[strong "Who's Hiring"] threads on Hacker News #[a(href='/rss') #[i.fa.fa-rss(aria-hidden='true')]]
+      table.table.table-striped
+        tbody
+        for post in posts
+          tr
+            td.fit #{post.created_at}
+            |
+            td
+              a(href=post.url) #{post.title}
+            |

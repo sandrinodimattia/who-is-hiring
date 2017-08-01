@@ -1,0 +1,16 @@
+{
+  "name": "who-is-hiring",
+  "version": "1.0.0",
+  "main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"start": "node index"
+	},
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "express": "^4.15.3",
+    "hacker-news-api": "^2.0.0",
+    "pug": "^2.0.0-rc.2",
+    "rss": "^1.2.2"
+  }
+}
